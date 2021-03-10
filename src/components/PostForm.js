@@ -16,6 +16,10 @@ class PostForm extends React.Component {
 
     const {title} = this.state
 
+    if (!title.trim()) {
+
+    }
+
     const newPost = {
      title, id: Date.now().toString()
     }
@@ -46,6 +50,7 @@ class PostForm extends React.Component {
             onChange={this.changeInputHandler}
           />
         </div>
+        <br/>
         <button className="btn btn-success" type="submit">Создать</button>
       </form>
     )
